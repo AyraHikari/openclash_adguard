@@ -8,6 +8,8 @@ on:
 jobs:
   convert:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -39,7 +41,7 @@ jobs:
           echo "Conversion complete."
 
       - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update OpenClash YAML from AdGuard blocklist"
           file_pattern: adguard_openclash.yaml
