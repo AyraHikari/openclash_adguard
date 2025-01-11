@@ -24,19 +24,22 @@ jobs:
           echo "Converting AdGuard DNS filter to OpenClash YAML..."
 
           # Add header and start payload
-          echo "# OpenClash AdBlock: Converted from AdGuard DNS Filter\n\n" > adguard_openclash.yaml
+          echo "# OpenClash AdGuard: https://github.com/AyraHikari/openclash_adguard" > adguard_openclash.yaml
+          echo "# Updated at: $(date +'%H:%M %d/%m/%Y')" >> adguard_openclash.yaml
+          echo " " >> adguard_openclash.yaml
+          echo " " >> adguard_openclash.yaml
           echo "payload:" >> adguard_openclash.yaml
 
           # Process each line, converting block rules to OpenClash format
-          grep -E '^\|\|' adguard_dns_filter.txt \
+          grep -E '^[|][|]' adguard_dns_filter.txt \
             | sed 's/^||/  - DOMAIN-SUFFIX,/' \
-            | sed 's/\^$//' >> adguard_openclash.yaml
+            | sed -E 's/\^.*$//' >> adguard_openclash.yaml
 
           # Process exception rules (starting with @@)
           echo "\n# Exceptions:\n" >> adguard_openclash.yaml
-          grep -E '^@@\|\|' adguard_dns_filter.txt \
+          grep -E '^@@[|][|]' adguard_dns_filter.txt \
             | sed 's/^@@||/  - DOMAIN-SUFFIX,/' \
-            | sed 's/\^$//' >> adguard_openclash.yaml
+            | sed -E 's/\^.*$//' >> adguard_openclash.yaml
 
           echo "Conversion complete."
 
