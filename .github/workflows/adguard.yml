@@ -33,10 +33,12 @@ jobs:
           # Process each line, converting block rules to OpenClash format
           grep -E '^[|][|]' adguard_dns_filter.txt \
             | sed 's/^||/  - DOMAIN-SUFFIX,/' \
-            | sed -E 's/\^.*$//' >> adguard_openclash.yaml
+            | sed -E 's/\^.*$//' \
+            | sed 's/\$dnsrewrite=0\.0\.0\.0//' >> adguard_openclash.yaml
 
           # Process exception rules (starting with @@)
-          echo "\n# Exceptions:\n" >> adguard_openclash.yaml
+          echo " "
+          echo "# Exceptions:" >> adguard_openclash.yaml
           grep -E '^@@[|][|]' adguard_dns_filter.txt \
             | sed 's/^@@||/  - DOMAIN-SUFFIX,/' \
             | sed -E 's/\^.*$//' >> adguard_openclash.yaml
