@@ -27,7 +27,6 @@ jobs:
           echo "# OpenClash AdGuard: https://github.com/AyraHikari/openclash_adguard" > adguard_openclash.yaml
           echo "# Updated at: $(date +'%H:%M %d/%m/%Y')" >> adguard_openclash.yaml
           echo " " >> adguard_openclash.yaml
-          echo " " >> adguard_openclash.yaml
           echo "payload:" >> adguard_openclash.yaml
 
           # Process each line, converting block rules to OpenClash format
@@ -37,7 +36,7 @@ jobs:
             | sed 's/\$dnsrewrite=0\.0\.0\.0//' >> adguard_openclash.yaml
 
           # Process exception rules (starting with @@)
-          echo " "
+          echo " " >> adguard_openclash.yaml
           echo "# Exceptions:" >> adguard_openclash.yaml
           grep -E '^@@[|][|]' adguard_dns_filter.txt \
             | sed 's/^@@||/  - DOMAIN-SUFFIX,/' \
