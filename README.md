@@ -13,7 +13,7 @@ rule-providers:
     behavior: classical
     path: "./rule_provider/adguard.yaml"
     url: https://raw.githubusercontent.com/AyraHikari/openclash_adguard/main/adguard_openclash.yaml
-    interval: 28800 # Update rules every 12 hours
+    interval: 43200 # Update rules every 12 hours
 
 rules:
 # AdGuard
