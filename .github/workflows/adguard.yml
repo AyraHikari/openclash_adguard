@@ -1,0 +1,45 @@
+name: Convert AdGuard to OpenClash
+
+on:
+  schedule:
+    - cron: '0 */12 * * *' # Every 12 hours
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download AdGuard blocklist
+        run: |
+          echo "Downloading AdGuard DNS filter..."
+          curl -s 'https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt' -o adguard_dns_filter.txt
+
+      - name: Convert to OpenClash YAML
+        run: |
+          echo "Converting AdGuard DNS filter to OpenClash YAML..."
+
+          # Add header and start payload
+          echo "# OpenClash AdBlock: Converted from AdGuard DNS Filter\n\n" > adguard_openclash.yaml
+          echo "payload:" >> adguard_openclash.yaml
+
+          # Process each line, converting block rules to OpenClash format
+          grep -E '^\|\|' adguard_dns_filter.txt \
+            | sed 's/^||/  - DOMAIN-SUFFIX,/' \
+            | sed 's/\^$//' >> adguard_openclash.yaml
+
+          # Process exception rules (starting with @@)
+          echo "\n# Exceptions:\n" >> adguard_openclash.yaml
+          grep -E '^@@\|\|' adguard_dns_filter.txt \
+            | sed 's/^@@||/  - DOMAIN-SUFFIX,/' \
+            | sed 's/\^$//' >> adguard_openclash.yaml
+
+          echo "Conversion complete."
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update OpenClash YAML from AdGuard blocklist"
+          file_pattern: adguard_openclash.yaml
