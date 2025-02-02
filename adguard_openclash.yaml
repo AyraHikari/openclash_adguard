@@ -1,5 +1,5 @@
 # OpenClash AdGuard: https://github.com/AyraHikari/openclash_adguard
-# Updated at: 12:19 01/02/2025
+# Updated at: 00:57 02/02/2025
  
 payload:
   - DOMAIN-SUFFIX,sapsobughoatch.net
@@ -30964,7 +30964,9 @@ payload:
   - DOMAIN-SUFFIX,05420795.xyz
   - DOMAIN-SUFFIX,05454674.xyz
   - DOMAIN-SUFFIX,05751c.site
+  - DOMAIN-SUFFIX,06969451.xyz
   - DOMAIN-SUFFIX,072551.xyz
+  - DOMAIN-SUFFIX,07327127.xyz
   - DOMAIN-SUFFIX,07421283.xyz
   - DOMAIN-SUFFIX,076f66b2.live
   - DOMAIN-SUFFIX,07e197.site
@@ -30978,6 +30980,7 @@ payload:
   - DOMAIN-SUFFIX,10523745.xyz
   - DOMAIN-SUFFIX,10614305.xyz
   - DOMAIN-SUFFIX,10753990.xyz
+  - DOMAIN-SUFFIX,11006451.xyz
   - DOMAIN-SUFFIX,11152646.xyz
   - DOMAIN-SUFFIX,1116c5.xyz
   - DOMAIN-SUFFIX,11778562.xyz
@@ -31023,6 +31026,7 @@ payload:
   - DOMAIN-SUFFIX,33848102.xyz
   - DOMAIN-SUFFIX,33862684.xyz
   - DOMAIN-SUFFIX,34475780.xyz
+  - DOMAIN-SUFFIX,35452888.xyz
   - DOMAIN-SUFFIX,36833185.xyz
   - DOMAIN-SUFFIX,37066957.xyz
   - DOMAIN-SUFFIX,38167473.xyz
@@ -37243,6 +37247,7 @@ payload:
   - DOMAIN-SUFFIX,wizaly.com
   - DOMAIN-SUFFIX,d1udjti6mtxz9q.cloudfront.net
   - DOMAIN-SUFFIX,tagman.britishairways.com
+  - DOMAIN-SUFFIX,log-upload-os.hoyoverse.com
   - DOMAIN-SUFFIX,analytics.avcdn.net
   - DOMAIN-SUFFIX,pbc.wsj.com
   - DOMAIN-SUFFIX,tracking.api.shoppinggives.com
@@ -40208,7 +40213,6 @@ payload:
   - DOMAIN-SUFFIX,apm-log-upload-os.hoyoverse.com
   - DOMAIN-SUFFIX,devlog-upload-os.hoyoverse.com
   - DOMAIN-SUFFIX,hkrpg-log-upload-os.hoyoverse.com
-  - DOMAIN-SUFFIX,log-upload-os.hoyoverse.com
   - DOMAIN-SUFFIX,minor-api-os.hoyoverse.com
   - DOMAIN-SUFFIX,overseauspider.yuanshen.com
   - DOMAIN-SUFFIX,sentry.eks.hoyoverse.com
@@ -47134,12 +47138,10 @@ payload:
   - DOMAIN-SUFFIX,ad.eva.vn
   - DOMAIN-SUFFIX,ad.happynest.vn
   - DOMAIN-SUFFIX,ad.icheck.com.vn
-  - DOMAIN-SUFFIX,ad.lapa.pub
   - DOMAIN-SUFFIX,ad.phunuxuavanay.vn
   - DOMAIN-SUFFIX,ad.sunflower.vn
   - DOMAIN-SUFFIX,ad.vietbao.vn
   - DOMAIN-SUFFIX,ad.vkool.net
-  - DOMAIN-SUFFIX,ad.vkoolzzz.net
   - DOMAIN-SUFFIX,ad.zinimedia.com
   - DOMAIN-SUFFIX,adadmin.headlines.pw
   - DOMAIN-SUFFIX,adapi.tuyensinh247.com
@@ -47148,7 +47150,6 @@ payload:
   - DOMAIN-SUFFIX,addlog.thuvienphapluat.vn
   - DOMAIN-SUFFIX,addtop.trangvangvietnam.com
   - DOMAIN-SUFFIX,adhub.mobifone.vn
-  - DOMAIN-SUFFIX,adjusts.info
   - DOMAIN-SUFFIX,adm.phunusuckhoe.vn
   - DOMAIN-SUFFIX,adm.phunuvagiadinh.vn
   - DOMAIN-SUFFIX,admin.giaminhmedia.vn
@@ -47193,7 +47194,6 @@ payload:
   - DOMAIN-SUFFIX,ads.ketnoitatca.net
   - DOMAIN-SUFFIX,ads.kiemsat.vn
   - DOMAIN-SUFFIX,ads.lamchame.vn
-  - DOMAIN-SUFFIX,ads.laodongbinhduong.org.vn
   - DOMAIN-SUFFIX,ads.laodongnghean.vn
   - DOMAIN-SUFFIX,ads.markettimes.vn
   - DOMAIN-SUFFIX,ads.marry.vn
@@ -47208,7 +47208,6 @@ payload:
   - DOMAIN-SUFFIX,ads.sexyland.vn
   - DOMAIN-SUFFIX,ads.songmoi.vn
   - DOMAIN-SUFFIX,ads.suckhoegiadinh.com.vn
-  - DOMAIN-SUFFIX,ads.thegioitiepthi.vn
   - DOMAIN-SUFFIX,ads.thesaigontimes.vn
   - DOMAIN-SUFFIX,ads.thitruongtaichinhtiente.vn
   - DOMAIN-SUFFIX,ads.thvli.vn
@@ -47219,7 +47218,6 @@ payload:
   - DOMAIN-SUFFIX,ads.vovlive.vn
   - DOMAIN-SUFFIX,ads.xedoisong.vn
   - DOMAIN-SUFFIX,ads.xemphimso.com
-  - DOMAIN-SUFFIX,ads.xemtivisohd.net
   - DOMAIN-SUFFIX,ads.zunia.vn
   - DOMAIN-SUFFIX,ads1.careerbuilder.vn
   - DOMAIN-SUFFIX,ads8.fpt.vn
@@ -47227,7 +47225,6 @@ payload:
   - DOMAIN-SUFFIX,adserver.muaban.net
   - DOMAIN-SUFFIX,adserver.trangphim.net
   - DOMAIN-SUFFIX,adsgo.nhipcaudautu.vn
-  - DOMAIN-SUFFIX,adsphim.lol
   - DOMAIN-SUFFIX,adsplus.vn
   - DOMAIN-SUFFIX,adsv2.autodaily.vn
   - DOMAIN-SUFFIX,adsweb.vn
@@ -47248,9 +47245,7 @@ payload:
   - DOMAIN-SUFFIX,advzone.ioe.vn
   - DOMAIN-SUFFIX,adx.baolongan.vn
   - DOMAIN-SUFFIX,adx.chinmedia.vn
-  - DOMAIN-SUFFIX,adx.edutimes.com.vn
   - DOMAIN-SUFFIX,adx.hoanggia.net.vn
-  - DOMAIN-SUFFIX,adx.hongtinnhanh.com
   - DOMAIN-SUFFIX,adx.kul.vn
   - DOMAIN-SUFFIX,adx.phunuadong.vn
   - DOMAIN-SUFFIX,adx.xemvtv.net
@@ -47258,7 +47253,6 @@ payload:
   - DOMAIN-SUFFIX,aff.atp.vn
   - DOMAIN-SUFFIX,aff2.linksht.online
   - DOMAIN-SUFFIX,affiliate.chiaki.vn
-  - DOMAIN-SUFFIX,ailamtrieuphu.com
   - DOMAIN-SUFFIX,aj2393.online
   - DOMAIN-SUFFIX,ak9.6895588.com
   - DOMAIN-SUFFIX,alexajstrack.com
@@ -47271,7 +47265,6 @@ payload:
   - DOMAIN-SUFFIX,analytic.vnanet.vn
   - DOMAIN-SUFFIX,analytics-cds.mobiedu.vn
   - DOMAIN-SUFFIX,analytics.admon.com.vn
-  - DOMAIN-SUFFIX,analytics.aita.gov.vn
   - DOMAIN-SUFFIX,analytics.amedigital.vn
   - DOMAIN-SUFFIX,analytics.bachtuongphat.com
   - DOMAIN-SUFFIX,analytics.bkav.com
@@ -47282,12 +47275,10 @@ payload:
   - DOMAIN-SUFFIX,analytics.explus.vn
   - DOMAIN-SUFFIX,analytics.fsoft.com.vn
   - DOMAIN-SUFFIX,analytics.gotama.link
-  - DOMAIN-SUFFIX,analytics.hapo.vn
   - DOMAIN-SUFFIX,analytics.hebela.vn
   - DOMAIN-SUFFIX,analytics.hub-js.com
   - DOMAIN-SUFFIX,analytics.jamstackvietnam.com
   - DOMAIN-SUFFIX,analytics.mobiedu.vn
-  - DOMAIN-SUFFIX,analytics.molistar.com
   - DOMAIN-SUFFIX,analytics.nhattao.com
   - DOMAIN-SUFFIX,analytics.ntlc.com.vn
   - DOMAIN-SUFFIX,analytics.pancake.vn
@@ -47302,13 +47293,11 @@ payload:
   - DOMAIN-SUFFIX,analytics.vietnamfinance.vn
   - DOMAIN-SUFFIX,analytics.vnpt.vn
   - DOMAIN-SUFFIX,analytics.vnreview.vn
-  - DOMAIN-SUFFIX,analytics.yts.vn
   - DOMAIN-SUFFIX,analytics.zatomac.vn
   - DOMAIN-SUFFIX,analytics.zim.vn
   - DOMAIN-SUFFIX,api-logdev.sohatv.vn
   - DOMAIN-SUFFIX,api.boclinkads.com
   - DOMAIN-SUFFIX,api.moneyoyo.org
-  - DOMAIN-SUFFIX,api.ozui.vn
   - DOMAIN-SUFFIX,api2.boclinkads.com
   - DOMAIN-SUFFIX,apia.headlines.pw
   - DOMAIN-SUFFIX,apiv2.tiin.vn
@@ -47324,7 +47313,6 @@ payload:
   - DOMAIN-SUFFIX,banner.trangvangvietnam.com
   - DOMAIN-SUFFIX,banner.uto.vn
   - DOMAIN-SUFFIX,beta-log.anninhthudo.vn
-  - DOMAIN-SUFFIX,bgadx.com
   - DOMAIN-SUFFIX,bi.vhost.vn
   - DOMAIN-SUFFIX,bidgear-syndication.com
   - DOMAIN-SUFFIX,btrack.homedy.com
@@ -47332,12 +47320,10 @@ payload:
   - DOMAIN-SUFFIX,campaign.gitiho.com
   - DOMAIN-SUFFIX,cdn-ads.thesaigontimes.vn
   - DOMAIN-SUFFIX,cdn.adxcontent.com
-  - DOMAIN-SUFFIX,cdn.api-connect.io
   - DOMAIN-SUFFIX,cdn.qc24h.com
   - DOMAIN-SUFFIX,cdn2.cache.vn
   - DOMAIN-SUFFIX,cdptracker.hocmai.com.vn
   - DOMAIN-SUFFIX,ch6p2aj2gh8zy5cm0px9ow7aj3tmzhtk6lzx2ch9xj7gx2jq1cj8v4jklz6b.me
-  - DOMAIN-SUFFIX,chiasephim.xyz
   - DOMAIN-SUFFIX,click.vieon.vn
   - DOMAIN-SUFFIX,clicker.chiaki.vn
   - DOMAIN-SUFFIX,clientinfo.phimmoizz.net
@@ -47347,11 +47333,8 @@ payload:
   - DOMAIN-SUFFIX,core.vnecdn.com
   - DOMAIN-SUFFIX,counter.24h.com.vn
   - DOMAIN-SUFFIX,counter.ntdvn.com
-  - DOMAIN-SUFFIX,counter.ntdvn.net
   - DOMAIN-SUFFIX,cpx.vnecdn.com
-  - DOMAIN-SUFFIX,cre-ads.com
   - DOMAIN-SUFFIX,csmads.gameclick.vn
-  - DOMAIN-SUFFIX,delecpuzz.com
   - DOMAIN-SUFFIX,delivery.doisongphapluat.com.vn
   - DOMAIN-SUFFIX,delivery.upremium.asia
   - DOMAIN-SUFFIX,demopage.me
@@ -47373,7 +47356,6 @@ payload:
   - DOMAIN-SUFFIX,go.vnecdn.com
   - DOMAIN-SUFFIX,gtmjs.com
   - DOMAIN-SUFFIX,h6o2z0pwx5ja7dwxn0wx4fhv7mp0qoladm8vj6do4h1c6gja8evrn6g5fixk.me
-  - DOMAIN-SUFFIX,hexapinow.xyz
   - DOMAIN-SUFFIX,hit.123c.vn
   - DOMAIN-SUFFIX,iads.staticscdn.net
   - DOMAIN-SUFFIX,iads.vision
@@ -47381,7 +47363,6 @@ payload:
   - DOMAIN-SUFFIX,interactive.tinnhanhchungkhoan.vn
   - DOMAIN-SUFFIX,intranet.dcorp.com.vn
   - DOMAIN-SUFFIX,invite.baomoi.com
-  - DOMAIN-SUFFIX,k8trangphim.com
   - DOMAIN-SUFFIX,ketquaxosotoancau.org
   - DOMAIN-SUFFIX,kh.suno.vn
   - DOMAIN-SUFFIX,kv-analytics.kiotviet.vn
@@ -47390,7 +47371,6 @@ payload:
   - DOMAIN-SUFFIX,lamthong.net
   - DOMAIN-SUFFIX,landingpagelagi.vn
   - DOMAIN-SUFFIX,lg.lotus.vn
-  - DOMAIN-SUFFIX,link.cado.pro
   - DOMAIN-SUFFIX,live.careplusvn.com
   - DOMAIN-SUFFIX,live.vnpgroup.net
   - DOMAIN-SUFFIX,liveonline.nhanhoa.com
@@ -47469,7 +47449,6 @@ payload:
   - DOMAIN-SUFFIX,m6pz5h8qi18jq1s7hjkytxn7sjc0zpxw5gks3vyk8dcxs2cstjgdxkp7t1eb.me
   - DOMAIN-SUFFIX,ma.tgdd.vn
   - DOMAIN-SUFFIX,marketing.hub-js.com
-  - DOMAIN-SUFFIX,marketing.itgeek.vn
   - DOMAIN-SUFFIX,matomo.bantheme.xyz
   - DOMAIN-SUFFIX,matomo.quan.hoabinh.vn
   - DOMAIN-SUFFIX,mautic-learn.teky.edu.vn
@@ -47477,12 +47456,12 @@ payload:
   - DOMAIN-SUFFIX,mautic.teky.edu.vn
   - DOMAIN-SUFFIX,measure.pti.com.vn
   - DOMAIN-SUFFIX,measure.vndirect.com.vn
-  - DOMAIN-SUFFIX,media.dabong247.com
   - DOMAIN-SUFFIX,menu.metu.vn
   - DOMAIN-SUFFIX,microad.vn
   - DOMAIN-SUFFIX,mkt.hoanghamobile.com
   - DOMAIN-SUFFIX,mobileads.dieuviet.com
   - DOMAIN-SUFFIX,monitor.teko.vn
+  - DOMAIN-SUFFIX,motphimqq.pro
   - DOMAIN-SUFFIX,mto.cgv.vn
   - DOMAIN-SUFFIX,nct1.logging.nextsmarty.com
   - DOMAIN-SUFFIX,newlog.daidoanket.vn
@@ -47509,13 +47488,10 @@ payload:
   - DOMAIN-SUFFIX,qctt24h.24h.com.vn
   - DOMAIN-SUFFIX,qcv5.blogtruyen.vn
   - DOMAIN-SUFFIX,quangcao.24h.com.vn
-  - DOMAIN-SUFFIX,quangcao.baovannghe.com.vn
   - DOMAIN-SUFFIX,quangcao.fff.com.vn
-  - DOMAIN-SUFFIX,quangcao247.com.vn
   - DOMAIN-SUFFIX,quangcaococcoc.vn
   - DOMAIN-SUFFIX,quangcaodantri.vn
   - DOMAIN-SUFFIX,r.tinmoi24.vn
-  - DOMAIN-SUFFIX,rei9jc56oyqux0rcpcquqmm7jc5freirpsquqkope3n3axrjacg8ipolxvbm.codes
   - DOMAIN-SUFFIX,report.mediahub.vn
   - DOMAIN-SUFFIX,report.vnay.vn
   - DOMAIN-SUFFIX,report2.mediahub.vn
@@ -47529,7 +47505,6 @@ payload:
   - DOMAIN-SUFFIX,s.zzcdn.me
   - DOMAIN-SUFFIX,s1.zzz.vn
   - DOMAIN-SUFFIX,s6.textlink.vn
-  - DOMAIN-SUFFIX,sda.tamdiem247.com
   - DOMAIN-SUFFIX,sdk.moneyoyo.com
   - DOMAIN-SUFFIX,sentry.mediacdn.vn
   - DOMAIN-SUFFIX,seo.cloud.edu.vn
@@ -47557,7 +47532,6 @@ payload:
   - DOMAIN-SUFFIX,stats.hstatic.net
   - DOMAIN-SUFFIX,stats.osd.vn
   - DOMAIN-SUFFIX,stats.petrotimes.vn
-  - DOMAIN-SUFFIX,stats.tamdiem247.com
   - DOMAIN-SUFFIX,stats.vietnammoi.vn
   - DOMAIN-SUFFIX,stc-nas.nixcdn.com
   - DOMAIN-SUFFIX,stc.nas.nixcdn.com
@@ -47571,7 +47545,6 @@ payload:
   - DOMAIN-SUFFIX,sv-static-lottery.headlines.pw
   - DOMAIN-SUFFIX,sv-static1-lottery.headlines.pw
   - DOMAIN-SUFFIX,sv.isvn.space
-  - DOMAIN-SUFFIX,syncwowsails.com
   - DOMAIN-SUFFIX,t2zc6vo8zj2ch6sh6kvu5vq8cjz4iv8v2aj1ckjy8zktaj8vm6visk6als8l.me
   - DOMAIN-SUFFIX,ta.toprework.vn
   - DOMAIN-SUFFIX,tagging-qadkfoj6ha-as.a.run.app
@@ -47590,8 +47563,6 @@ payload:
   - DOMAIN-SUFFIX,track.adshay.vn
   - DOMAIN-SUFFIX,track.icheck.com.vn
   - DOMAIN-SUFFIX,track.kyna.vn
-  - DOMAIN-SUFFIX,track.lapa.pub
-  - DOMAIN-SUFFIX,track.lemonnovel.com
   - DOMAIN-SUFFIX,track.pnj.com.vn
   - DOMAIN-SUFFIX,track.popsww.com
   - DOMAIN-SUFFIX,track.saigon.pro
@@ -47601,7 +47572,6 @@ payload:
   - DOMAIN-SUFFIX,tracker.anime47.com
   - DOMAIN-SUFFIX,tracker.edupia.vn
   - DOMAIN-SUFFIX,tracker.fado.vn
-  - DOMAIN-SUFFIX,tracker.gigaphim.com
   - DOMAIN-SUFFIX,tracker.phunusuckhoe.vn
   - DOMAIN-SUFFIX,tracker.phunuvagiadinh.vn
   - DOMAIN-SUFFIX,tracker.thichxemphim.net
@@ -47615,7 +47585,6 @@ payload:
   - DOMAIN-SUFFIX,tracking.fff.com.vn
   - DOMAIN-SUFFIX,tracking.gapone.vn
   - DOMAIN-SUFFIX,tracking.hapiwork.vn
-  - DOMAIN-SUFFIX,tracking.hongtinnhanh.com
   - DOMAIN-SUFFIX,tracking.meta.vn
   - DOMAIN-SUFFIX,tracking.phunuadong.vn
   - DOMAIN-SUFFIX,tracking.saostar.vn
@@ -47624,7 +47593,6 @@ payload:
   - DOMAIN-SUFFIX,tracking.tuyenquang.gov.vn
   - DOMAIN-SUFFIX,tracking.tvet-vietnam.org
   - DOMAIN-SUFFIX,tracking.vegaid.vn
-  - DOMAIN-SUFFIX,tracking.vht.com.vn
   - DOMAIN-SUFFIX,tracking.vietbao.vn
   - DOMAIN-SUFFIX,tracking.viez.vn
   - DOMAIN-SUFFIX,trackingapi.foody.vn
@@ -47650,7 +47618,6 @@ payload:
   - DOMAIN-SUFFIX,vietnamdaily-log.kienthuc.net.vn
   - DOMAIN-SUFFIX,vietnamdaily-log.trithuccuocsong.vn
   - DOMAIN-SUFFIX,vietpub.com
-  - DOMAIN-SUFFIX,vlxx.host
   - DOMAIN-SUFFIX,vnadssb.com
   - DOMAIN-SUFFIX,web-analytic.ghtk.vn
   - DOMAIN-SUFFIX,web-analytics.mona.host
@@ -50864,6 +50831,7 @@ payload:
   - DOMAIN-SUFFIX,telaagam.maxisl.vip
   - DOMAIN-SUFFIX,telegram.app0w.ltd
   - DOMAIN-SUFFIX,teleway.top
+  - DOMAIN-SUFFIX,tempisite.com
   - DOMAIN-SUFFIX,tescoshop.shop
   - DOMAIN-SUFFIX,tet-lienquangarenavn.com
   - DOMAIN-SUFFIX,tet2023.shop
@@ -52212,6 +52180,7 @@ payload:
   - DOMAIN-SUFFIX,zingshop.net
   - DOMAIN-SUFFIX,zla653.top
   - DOMAIN-SUFFIX,zla963.top
+  - DOMAIN-SUFFIX,zloweb.me
   - DOMAIN-SUFFIX,zmomo.cc
   - DOMAIN-SUFFIX,znavidsde.cfd
   - DOMAIN-SUFFIX,zoneshewa.net
@@ -52233,6 +52202,7 @@ payload:
   - DOMAIN-SUFFIX,51tongji.trafficmanager.net
   - DOMAIN-SUFFIX,67.21.92.*.gif
   - DOMAIN-SUFFIX,cnzz.trafficmanager.net
+  - DOMAIN-SUFFIX,feronyv.com
   - DOMAIN-SUFFIX,tbbfdr.icu
   - DOMAIN-SUFFIX,oveakmqk.com
   - DOMAIN-SUFFIX,lsxvnzif.icu
@@ -56836,6 +56806,7 @@ payload:
   - DOMAIN-SUFFIX,adro.ir
   - DOMAIN-SUFFIX,affstat.digikala.com
   - DOMAIN-SUFFIX,affiliate.digikala.com
+  - DOMAIN-SUFFIX,bitad.ir
   - DOMAIN-SUFFIX,binoads.ir
   - DOMAIN-SUFFIX,bl9.ir
   - DOMAIN-SUFFIX,backlink.ir
