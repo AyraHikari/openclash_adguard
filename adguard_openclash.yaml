@@ -1,7 +1,15 @@
 # OpenClash AdGuard: https://github.com/AyraHikari/openclash_adguard
-# Updated at: 00:56 10/02/2025
+# Updated at: 12:22 10/02/2025
  
 payload:
+  - DOMAIN-SUFFIX,loowhujoom.net
+  - DOMAIN-SUFFIX,glugherg.net
+  - DOMAIN-SUFFIX,louthicoozit.net
+  - DOMAIN-SUFFIX,feckurteg.net
+  - DOMAIN-SUFFIX,octo25.me
+  - DOMAIN-SUFFIX,vidscriptshark.com
+  - DOMAIN-SUFFIX,threewoodslose.com
+  - DOMAIN-SUFFIX,sharkfirelife.com
   - DOMAIN-SUFFIX,videocdnmetrika.com
   - DOMAIN-SUFFIX,pkyffuewwuhnld.com
   - DOMAIN-SUFFIX,phahifoobsie.net
@@ -11956,7 +11964,6 @@ payload:
   - DOMAIN-SUFFIX,glsfreeads.com
   - DOMAIN-SUFFIX,glssp.net
   - DOMAIN-SUFFIX,gludqoqmuwbc.com
-  - DOMAIN-SUFFIX,glugherg.net
   - DOMAIN-SUFFIX,glugreez.com
   - DOMAIN-SUFFIX,gluilyepacme.shop
   - DOMAIN-SUFFIX,glukropi.com
@@ -33287,7 +33294,7 @@ payload:
   - DOMAIN-SUFFIX,ads-server.mxplay.com
   - DOMAIN-SUFFIX,mxaserver.mxplay.com
   - DOMAIN-SUFFIX,contextualadv.com
-  - DOMAIN-SUFFIX,prebid-cache.ifunny.co
+  - DOMAIN-SUFFIX,prebid-cache*.ifunny.co
   - DOMAIN-SUFFIX,tk0x1.com
   - DOMAIN-SUFFIX,itdsmr.com
   - DOMAIN-SUFFIX,external-api.impression-neo.naver.com
@@ -33830,6 +33837,7 @@ payload:
   - DOMAIN-SUFFIX,ib.snssdk.com
   - DOMAIN-SUFFIX,xlog.snssdk.com
   - DOMAIN-SUFFIX,log.snssdk.com
+  - DOMAIN-SUFFIX,us-behavior.apitd.net
   - DOMAIN-SUFFIX,collector.snplow.net
   - DOMAIN-SUFFIX,squeezely.tech
   - DOMAIN-SUFFIX,d5yoctgpv4cpx.cloudfront.net
@@ -34362,7 +34370,7 @@ payload:
   - DOMAIN-SUFFIX,analytics.growthphysics.com
   - DOMAIN-SUFFIX,sp.tinymce.com
   - DOMAIN-SUFFIX,wazimo.com
-  - DOMAIN-SUFFIX,srmdata-eur.com
+  - DOMAIN-SUFFIX,srmdata-*.com
   - DOMAIN-SUFFIX,doppler-beacons.cbsivideo.com
   - DOMAIN-SUFFIX,events.askjdhaa.com
   - DOMAIN-SUFFIX,tikstok.fun
@@ -42600,7 +42608,6 @@ payload:
   - DOMAIN-SUFFIX,dosawes.com
   - DOMAIN-SUFFIX,lusupodum.com
   - DOMAIN-SUFFIX,clairpixum.com
-  - DOMAIN-SUFFIX,octo25.me
   - DOMAIN-SUFFIX,bmmwa.info
   - DOMAIN-SUFFIX,iwrcoct.info
   - DOMAIN-SUFFIX,hfnuqljjnt.com
@@ -42632,7 +42639,6 @@ payload:
   - DOMAIN-SUFFIX,miradres.com
   - DOMAIN-SUFFIX,eehhabacgieacfjeaacg.world
   - DOMAIN-SUFFIX,bidmatic.io
-  - DOMAIN-SUFFIX,vidscriptshark.com
   - DOMAIN-SUFFIX,1qe.info
   - DOMAIN-SUFFIX,23oct2023.site
   - DOMAIN-SUFFIX,fcepahafyq.com
@@ -52468,6 +52474,7 @@ payload:
   - DOMAIN-SUFFIX,brornaeq.com
   - DOMAIN-SUFFIX,strakuty.com
   - DOMAIN-SUFFIX,zcrddj.icu
+  - DOMAIN-SUFFIX,nonguds.com
   - DOMAIN-SUFFIX,vjzqfh.icu
   - DOMAIN-SUFFIX,8ff0.cn
   - DOMAIN-SUFFIX,tdinmai.top
