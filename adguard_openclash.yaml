@@ -1,5 +1,5 @@
 # OpenClash AdGuard: https://github.com/AyraHikari/openclash_adguard
-# Updated at: 12:23 20/03/2025
+# Updated at: 00:59 21/03/2025
  
 payload:
   - DOMAIN-SUFFIX,hakurei.cdnbo.org
@@ -34305,6 +34305,7 @@ payload:
   - DOMAIN-SUFFIX,static.tradetracker.net
   - DOMAIN-SUFFIX,supply.upjers.com
   - DOMAIN-SUFFIX,syndicate.payloadz.com
+  - DOMAIN-SUFFIX,t.babelmedia.global
   - DOMAIN-SUFFIX,tag.regieci.com
   - DOMAIN-SUFFIX,tags.refinery89.com
   - DOMAIN-SUFFIX,tcadserver.rain-digital.ca
@@ -36568,6 +36569,8 @@ payload:
   - DOMAIN-SUFFIX,ib.snssdk.com
   - DOMAIN-SUFFIX,xlog.snssdk.com
   - DOMAIN-SUFFIX,log.snssdk.com
+  - DOMAIN-SUFFIX,install*.zonastat.com
+  - DOMAIN-SUFFIX,tags.pw.adn.cloud
   - DOMAIN-SUFFIX,api-notify.markarch.com
   - DOMAIN-SUFFIX,venatusmedia.com
   - DOMAIN-SUFFIX,metrics.nsureapi.com
@@ -37950,6 +37953,7 @@ payload:
   - DOMAIN-SUFFIX,amc.yandex.ru
   - DOMAIN-SUFFIX,mc.yandex.ru
   - DOMAIN-SUFFIX,mc.yandex.com
+  - DOMAIN-SUFFIX,mc.yandex.md
   - DOMAIN-SUFFIX,track.segmentstream.com
   - DOMAIN-SUFFIX,vboro.de
   - DOMAIN-SUFFIX,barddfvgkhctch11.ru
@@ -89169,6 +89173,7 @@ payload:
   - DOMAIN-SUFFIX,x.weather.com
   - DOMAIN-SUFFIX,xp2023-pix.s3.amazonaws.com
   - DOMAIN-SUFFIX,yoast-schema-graph.com
+  - DOMAIN-SUFFIX,yotrack.cdn.ybn.io
   - DOMAIN-SUFFIX,adsdk.yandex.ru
   - DOMAIN-SUFFIX,analytics.samsungknox.com
   - DOMAIN-SUFFIX,extmaps-api.yandex.net
@@ -89988,7 +89993,6 @@ payload:
   - DOMAIN-SUFFIX,xad.dnoticias.pt
   - DOMAIN-SUFFIX,adclient-uol.lp.uol.com.br
   - DOMAIN-SUFFIX,adv.r7.com
-  - DOMAIN-SUFFIX,t.babelmedia.global
   - DOMAIN-SUFFIX,butlercdn.com
   - DOMAIN-SUFFIX,assets.etus.digital
   - DOMAIN-SUFFIX,lyappreciat.info
@@ -90094,6 +90098,7 @@ payload:
   - DOMAIN-SUFFIX,templates.buscape.com
   - DOMAIN-SUFFIX,yestorrents.org
   - DOMAIN-SUFFIX,oecistbenton.com
+  - DOMAIN-SUFFIX,vvdrhe.win
   - DOMAIN-SUFFIX,adwadvert.com.ua
   - DOMAIN-SUFFIX,nanthou.life
   - DOMAIN-SUFFIX,wrapper.bracdn.online
@@ -99938,10 +99943,13 @@ payload:
   - DOMAIN-SUFFIX,51tongji.trafficmanager.net
   - DOMAIN-SUFFIX,67.21.92.*.gif
   - DOMAIN-SUFFIX,cnzz.trafficmanager.net
+  - DOMAIN-SUFFIX,feernhuhe.com
   - DOMAIN-SUFFIX,spkh.cn
   - DOMAIN-SUFFIX,sodenneyg.com
   - DOMAIN-SUFFIX,zqntbc.top
   - DOMAIN-SUFFIX,lcidauv.top
+  - DOMAIN-SUFFIX,bekd.cn
+  - DOMAIN-SUFFIX,uhityllhn.com
   - DOMAIN-SUFFIX,xunqrutsl.com
   - DOMAIN-SUFFIX,jslxzx.icu
   - DOMAIN-SUFFIX,xeccotftw.com
