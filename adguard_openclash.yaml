@@ -1,5 +1,5 @@
 # OpenClash AdGuard: https://github.com/AyraHikari/openclash_adguard
-# Updated at: 12:21 23/03/2025
+# Updated at: 01:00 24/03/2025
  
 payload:
   - DOMAIN-SUFFIX,ogaku.site
@@ -85124,6 +85124,7 @@ payload:
   - DOMAIN-SUFFIX,wiz.sncf-connect.com
   - DOMAIN-SUFFIX,wz.allianz.fr
   - DOMAIN-SUFFIX,d1udjti6mtxz9q.cloudfront.net
+  - DOMAIN-SUFFIX,tempo-client-metric-prod.s3.amazonaws.com
   - DOMAIN-SUFFIX,sapphire-api.target.com
   - DOMAIN-SUFFIX,pixel.thoughtmetric.io
   - DOMAIN-SUFFIX,c9nyrr.puurfiguur.nl
@@ -100017,11 +100018,17 @@ payload:
   - DOMAIN-SUFFIX,51tongji.trafficmanager.net
   - DOMAIN-SUFFIX,67.21.92.*.gif
   - DOMAIN-SUFFIX,cnzz.trafficmanager.net
+  - DOMAIN-SUFFIX,khegritww.com
+  - DOMAIN-SUFFIX,knul.cn
+  - DOMAIN-SUFFIX,ra10.xyz
   - DOMAIN-SUFFIX,gerqragpl.com
   - DOMAIN-SUFFIX,nghv.cn
   - DOMAIN-SUFFIX,wlwgloo.top
   - DOMAIN-SUFFIX,wlwgloo.icu
   - DOMAIN-SUFFIX,hchus5739dmew.top
+  - DOMAIN-SUFFIX,urkt.cn
+  - DOMAIN-SUFFIX,screiltol.com
+  - DOMAIN-SUFFIX,bnbwvp.top
   - DOMAIN-SUFFIX,stemedntm.com
   - DOMAIN-SUFFIX,r5twojylmzsym.top
   - DOMAIN-SUFFIX,avkd.cn
