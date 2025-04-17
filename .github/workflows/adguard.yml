@@ -17,7 +17,10 @@ jobs:
       - name: Download AdGuard blocklist
         run: |
           echo "Downloading AdGuard DNS filter..."
-          curl -s 'https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt' -o adguard_dns_filter.txt
+          curl -s 'https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt' -o adguard_base_filter.txt
+          curl -s 'https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt' -o adguard_spyware_filter.txt
+          curl -s 'https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_4_Social/filter.txt' -o adguard_social_filter.txt
+          curl -s 'https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/ThirdParty/filter_102_ABPindo/filter.txt' -o adguard_adpindo_filter.txt
 
       - name: Convert to OpenClash YAML
         run: |
@@ -29,18 +32,21 @@ jobs:
           echo " " >> adguard_openclash.yaml
           echo "payload:" >> adguard_openclash.yaml
 
-          # Process each line, converting block rules to OpenClash format
-          grep -E '^[|][|]' adguard_dns_filter.txt \
-            | sed 's/^||/  - DOMAIN-SUFFIX,/' \
-            | sed -E 's/\^.*$//' \
-            | sed 's/\$dnsrewrite=0\.0\.0\.0//' >> adguard_openclash.yaml
-
-          # Process exception rules (starting with @@)
-          echo " " >> adguard_openclash.yaml
-          echo "# Exceptions:" >> adguard_openclash.yaml
-          grep -E '^@@[|][|]' adguard_dns_filter.txt \
-            | sed 's/^@@||/  - DOMAIN-SUFFIX,/' \
-            | sed -E 's/\^.*$//' >> adguard_openclash.yaml
+          # Process all downloaded files
+          for file in adguard_*_filter.txt; do
+            # Process block rules (starting with ||)
+            grep -E '^[|][|]' "$file" \
+              | sed 's/^||/  - DOMAIN-SUFFIX,/' \
+              | sed -E 's/\^.*$//' \
+              | sed 's/\$dnsrewrite=0\.0\.0\.0//' >> adguard_openclash.yaml
+            
+            # Process exception rules (starting with @@)
+            echo " " >> adguard_openclash.yaml
+            echo "# Exceptions from $file:" >> adguard_openclash.yaml
+            grep -E '^@@[|][|]' "$file" \
+              | sed 's/^@@||/  - DOMAIN-SUFFIX,/' \
+              | sed -E 's/\^.*$//' >> adguard_openclash.yaml
+          done
 
           echo "Conversion complete."
 
@@ -48,4 +54,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update OpenClash YAML from AdGuard blocklist"
-          file_pattern: adguard_openclash.yaml
+          file_pattern: |
+            adguard_openclash.yaml
+            adguard_*_filter.txt
