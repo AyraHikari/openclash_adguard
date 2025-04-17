@@ -17,10 +17,7 @@ jobs:
       - name: Download AdGuard blocklist
         run: |
           echo "Downloading AdGuard DNS filter..."
-          curl -s 'https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt' -o adguard_base_filter.txt
-          curl -s 'https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt' -o adguard_spyware_filter.txt
-          curl -s 'https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_4_Social/filter.txt' -o adguard_social_filter.txt
-          curl -s 'https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/ThirdParty/filter_102_ABPindo/filter.txt' -o adguard_adpindo_filter.txt
+          curl -s 'https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt' -o adguard_base_filter.txt
 
       - name: Convert to OpenClash YAML
         run: |
