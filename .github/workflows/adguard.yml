@@ -35,27 +35,27 @@ jobs:
           # Process all downloaded files
           for file in adguard_*_filter.txt; do
             # Process block rules (starting with ||)
-            grep -E '^[|][|]' "$file" \
-              | sed 's/^||//' \  # Remove leading '||'
-              | sed -E 's/[/].*$//' \  # Remove paths (e.g., /wp-content/...)
-              | sed -E 's/\$.*$//' \  # Remove modifiers (e.g., $script, $important)
-              | sed -E 's/\^.*$//' \  # Remove AdGuard-specific suffixes (^)
-              | sed 's/\$dnsrewrite=0\.0\.0\.0//' \  # Remove DNS rewrite rules
-              | awk '!seen[$0]++' \  # Remove duplicates
-              | sed '/^$/d' \  # Remove empty lines
-              | sed 's/^/  - DOMAIN-SUFFIX,/' >> adguard_openclash.yaml  # Add OpenClash prefix
+            grep -E '^[|][|]' "$file" |
+              sed 's/^||//' |
+              sed -E 's/[/].*$//' |
+              sed -E 's/\$.*$//' |
+              sed -E 's/\^.*$//' |
+              sed 's/\$dnsrewrite=0\.0\.0\.0//' |
+              awk '!seen[$0]++' |
+              sed '/^$/d' |
+              sed 's/^/  - DOMAIN-SUFFIX,/' >> adguard_openclash.yaml
             
             # Process exception rules (starting with @@)
             echo " " >> adguard_openclash.yaml
             echo "# Exceptions from $file:" >> adguard_openclash.yaml
-            grep -E '^@@[|][|]' "$file" \
-              | sed 's/^@@||//' \  # Remove leading '@@||'
-              | sed -E 's/[/].*$//' \  # Remove paths
-              | sed -E 's/\$.*$//' \  # Remove modifiers
-              | sed -E 's/\^.*$//' \  # Remove AdGuard suffixes
-              | awk '!seen[$0]++' \  # Remove duplicates
-              | sed '/^$/d' \  # Remove empty lines
-              | sed 's/^/  - DOMAIN-SUFFIX,/' >> adguard_openclash.yaml  # Add OpenClash prefix
+            grep -E '^@@[|][|]' "$file" |
+              sed 's/^@@||//' |
+              sed -E 's/[/].*$//' |
+              sed -E 's/\$.*$//' |
+              sed -E 's/\^.*$//' |
+              awk '!seen[$0]++' |
+              sed '/^$/d' |
+              sed 's/^/  - DOMAIN-SUFFIX,/' >> adguard_openclash.yaml
           done
 
           echo "Conversion complete."
