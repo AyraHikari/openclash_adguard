@@ -2,7 +2,10 @@
 
 This repository provides an AdBlock list formatted for OpenClash. The source is taken from [AdGuard Hostlists Registry](https://github.com/AdguardTeam/HostlistsRegistry) and is updated automatically every day using GitHub Actions.
 
-![image](https://github.com/user-attachments/assets/26f153eb-e93c-44d8-ac95-2395d93558ef)
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/e6ccfa53-99ac-45df-9cb6-d5fb0f44e00f"/>
+</p>
+
 
 ## How to Use
 
