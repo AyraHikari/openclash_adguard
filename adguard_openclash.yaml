@@ -1,7 +1,8 @@
 # OpenClash AdGuard: https://github.com/AyraHikari/openclash_adguard
-# Updated at: 01:02 06/05/2025
+# Updated at: 12:27 06/05/2025
  
 payload:
+  - DOMAIN-SUFFIX,gusoclji.com
   - DOMAIN-SUFFIX,lolostan.com
   - DOMAIN-SUFFIX,awdeliverynet.com
   - DOMAIN-SUFFIX,bevfpfekwskzg.world
@@ -37251,6 +37252,7 @@ payload:
   - DOMAIN-SUFFIX,xlog.snssdk.com
   - DOMAIN-SUFFIX,log.snssdk.com
   - DOMAIN-SUFFIX,kib.hu
+  - DOMAIN-SUFFIX,analytics.newsifier.nl
   - DOMAIN-SUFFIX,mn-tz.com
   - DOMAIN-SUFFIX,tr.thecontentserver.com
   - DOMAIN-SUFFIX,sst.hostnet.nl
@@ -88101,6 +88103,12 @@ payload:
   - DOMAIN-SUFFIX,wz.allianz.fr
   - DOMAIN-SUFFIX,d1udjti6mtxz9q.cloudfront.net
   - DOMAIN-SUFFIX,incoming.telemetry.mozilla.org
+  - DOMAIN-SUFFIX,apiproxy-log-nlb-1f304af4d3ac01a4.elb.us-east-*.amazonaws.com
+  - DOMAIN-SUFFIX,ichnaea.dradis.netflix.com
+  - DOMAIN-SUFFIX,customerevents.dradis.netflix.com
+  - DOMAIN-SUFFIX,customerevents.us-east-*.internal.dradis.netflix.com
+  - DOMAIN-SUFFIX,config.sdk.kochava.dewrain.life
+  - DOMAIN-SUFFIX,log.cookieyes.com
   - DOMAIN-SUFFIX,pl.elements.video
   - DOMAIN-SUFFIX,sgtm.alfinans.dk
   - DOMAIN-SUFFIX,sgtm.aziendechesifinanzianodasole.com
@@ -88383,6 +88391,7 @@ payload:
   - DOMAIN-SUFFIX,agi-static.indiatimes.com
   - DOMAIN-SUFFIX,fail.adr.ec
   - DOMAIN-SUFFIX,t.adii.se
+  - DOMAIN-SUFFIX,s.bunkr.ru
   - DOMAIN-SUFFIX,stats.bunkr.ru
   - DOMAIN-SUFFIX,logs.netflix.com
   - DOMAIN-SUFFIX,mst.rnd.de
@@ -91986,7 +91995,6 @@ payload:
   - DOMAIN-SUFFIX,log-*.previewnetworks.com
   - DOMAIN-SUFFIX,log-pq.shopfully.cloud
   - DOMAIN-SUFFIX,log.aimtell.com
-  - DOMAIN-SUFFIX,log.cookieyes.com
   - DOMAIN-SUFFIX,log.nordot.jp
   - DOMAIN-SUFFIX,log.seekda.com
   - DOMAIN-SUFFIX,logging.je-apps.com
@@ -103123,9 +103131,12 @@ payload:
   - DOMAIN-SUFFIX,67.21.92.*.gif
   - DOMAIN-SUFFIX,cnzz.trafficmanager.net
   - DOMAIN-SUFFIX,qsko05060mas.com
+  - DOMAIN-SUFFIX,qsko05061mas.com
   - DOMAIN-SUFFIX,pwchaukoieor.com
   - DOMAIN-SUFFIX,nzoj.cn
   - DOMAIN-SUFFIX,gawnaze.com
+  - DOMAIN-SUFFIX,bhddjf.top
+  - DOMAIN-SUFFIX,enwucnw.top
   - DOMAIN-SUFFIX,yqqv.cn
   - DOMAIN-SUFFIX,zxiws.cn
   - DOMAIN-SUFFIX,qiwqaagnaell.com
