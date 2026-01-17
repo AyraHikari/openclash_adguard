@@ -1,0 +1,42 @@
+name: Convert AdBlock to OpenClash
+
+on:
+  schedule:
+    - cron: "0 */12 * * *" # every 12 hours
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Convert lists to OpenClash YAML (block + allow)
+        run: |
+          python3 scripts/convert_adguard_to_openclash.py \
+            --url "https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt" \
+            --url "https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt" \
+            --url "https://adguardteam.github.io/HostlistsRegistry/assets/filter_22.txt" \
+            --url "https://adguardteam.github.io/HostlistsRegistry/assets/filter_59.txt" \
+            --url "https://adguardteam.github.io/HostlistsRegistry/assets/filter_34.txt" \
+            --url "https://adguardteam.github.io/HostlistsRegistry/assets/filter_48.txt" \
+            --url "https://adguardteam.github.io/HostlistsRegistry/assets/filter_51.txt" \
+            --url "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt" \
+            --out-block "rules/adguard_block.yaml" \
+            --out-allow "rules/adguard_allow.yaml"
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update OpenClash rule-providers (AdGuard/ABP)"
+          file_pattern: |
+            rules/adguard_block.yaml
+            rules/adguard_allow.yaml
