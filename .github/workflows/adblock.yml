@@ -28,7 +28,6 @@ jobs:
             --url "https://adguardteam.github.io/HostlistsRegistry/assets/filter_59.txt" \
             --url "https://adguardteam.github.io/HostlistsRegistry/assets/filter_34.txt" \
             --url "https://adguardteam.github.io/HostlistsRegistry/assets/filter_48.txt" \
-            --url "https://adguardteam.github.io/HostlistsRegistry/assets/filter_51.txt" \
             --url "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt" \
             --out-block "rules/adguard_block.yaml" \
             --out-allow "rules/adguard_allow.yaml"
