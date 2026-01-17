@@ -33,10 +33,22 @@ jobs:
             --out-block "rules/adguard_block.yaml" \
             --out-allow "rules/adguard_allow.yaml"
 
+      - name: Debug generated files + git status
+        run: |
+          echo "=== rules dir ==="
+          ls -lah rules || true
+          echo "=== show allow head ==="
+          head -n 5 rules/adguard_allow.yaml || true
+          echo "=== git status ==="
+          git status --porcelain
+          echo "=== ignored? ==="
+          git check-ignore -v rules/adguard_allow.yaml || true
+
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update OpenClash rule-providers (AdGuard/ABP)"
+          add_options: "-A"
           file_pattern: |
             rules/adguard_block.yaml
             rules/adguard_allow.yaml
