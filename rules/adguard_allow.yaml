@@ -1,5 +1,5 @@
 # OpenClash AdGuard Converted: https://github.com/AyraHikari/openclash_adguard
-# Updated at: 2026-09-23 04:03:22 +0000
+# Updated at: 2026-09-23 16:28:25 +0000
 # Sources:
 # - https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
 # - https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt
@@ -8,7 +8,7 @@
 # - https://adguardteam.github.io/HostlistsRegistry/assets/filter_34.txt
 # - https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
 
-# Total allow domains: 240
+# Total allow domains: 241
 
 payload:
   - DOMAIN-SUFFIX,5471782.fls.doubleclick.net
@@ -221,6 +221,7 @@ payload:
   - DOMAIN-SUFFIX,support-beacon.nakanohito.jp
   - DOMAIN-SUFFIX,support-widget.nakanohito.jp
   - DOMAIN-SUFFIX,surveymyopinion.researchnow.com
+  - DOMAIN-SUFFIX,swasc.homedepot.com
   - DOMAIN-SUFFIX,tags.crwdcntrl.net
   - DOMAIN-SUFFIX,taiga.maven.io
   - DOMAIN-SUFFIX,thumbnail.thench.net
