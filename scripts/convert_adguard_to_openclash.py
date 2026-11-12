@@ -6,6 +6,16 @@ import re
 import sys
 from urllib.request import urlopen, Request
 
+# Upstream lists shared by every output format (Clash YAML and sing-box .srs).
+DEFAULT_SOURCES = [
+    "https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt",
+    "https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt",
+    "https://adguardteam.github.io/HostlistsRegistry/assets/filter_22.txt",
+    "https://adguardteam.github.io/HostlistsRegistry/assets/filter_59.txt",
+    "https://adguardteam.github.io/HostlistsRegistry/assets/filter_34.txt",
+    "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
+]
+
 DOMAIN_RE = re.compile(
     r"^(?=.{1,253}$)(?!-)(?:[a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,63}$"
 )
@@ -119,18 +129,12 @@ def write_yaml(path: str, header_lines: list[str], domains: list[str]) -> None:
             # Safer default: DOMAIN-SUFFIX
             f.write(f"  - DOMAIN-SUFFIX,{d}\n")
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--url", action="append", required=True, help="Source list URL (repeatable)")
-    ap.add_argument("--out-block", default="rules/adguard_block.yaml")
-    ap.add_argument("--out-allow", default="rules/adguard_allow.yaml")
-    ap.add_argument("--repo", default="https://github.com/AyraHikari/openclash_adguard")
-    args = ap.parse_args()
-
+def collect_domains(urls: list[str]) -> tuple[list[str], list[str]]:
+    """Fetch every source and return sorted (block, allow) domain lists."""
     block_set: set[str] = set()
     allow_set: set[str] = set()
 
-    for url in args.url:
+    for url in urls:
         text = fetch_text(url)
         for line in text.splitlines():
             line = strip_inline_comment(line)
@@ -151,11 +155,24 @@ def main():
 
     # If a domain appears in allowlist, remove it from blocklist.
     block_set.difference_update(allow_set)
+    return sorted(block_set), sorted(allow_set)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--url", action="append", help="Source list URL (repeatable, defaults to DEFAULT_SOURCES)")
+    ap.add_argument("--out-block", default="rules/adguard_block.yaml")
+    ap.add_argument("--out-allow", default="rules/adguard_allow.yaml")
+    ap.add_argument("--repo", default="https://github.com/AyraHikari/openclash_adguard")
+    args = ap.parse_args()
+
+    urls = args.url or DEFAULT_SOURCES
+    block_domains, allow_domains = collect_domains(urls)
 
     now = dt.datetime.now(dt.timezone.utc).astimezone()
     stamp = now.strftime("%Y-%m-%d %H:%M:%S %z")
 
-    sources = "\n".join([f"# - {u}" for u in args.url])
+    sources = "\n".join([f"# - {u}" for u in urls])
 
     header_common = [
         f"# OpenClash AdGuard Converted: {args.repo}",
@@ -164,9 +181,6 @@ def main():
         sources,
         "",
     ]
-
-    block_domains = sorted(block_set)
-    allow_domains = sorted(allow_set)
 
     write_yaml(args.out_block, header_common + [f"# Total block domains: {len(block_domains)}", ""], block_domains)
     write_yaml(args.out_allow, header_common + [f"# Total allow domains: {len(allow_domains)}", ""], allow_domains)

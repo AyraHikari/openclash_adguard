@@ -123,6 +123,65 @@ rules:
 
 - 🔁 Manual trigger supported via workflow dispatch
 
+## sing-box rule-sets (`.srs`)
+
+Binary [sing-box rule-sets](https://sing-box.sagernet.org/configuration/rule-set/) are built from the same
+sources by `scripts/convert_adguard_to_singbox.py` and compiled with a pinned sing-box release
+(`1.13.21`, the version OpenWrt's `sing-box-tiny` ships) by `scripts/build_srs.sh`.
+
+They are published to the **`srs`** branch, force-pushed on every run so the raw URL stays stable and
+the git history does not grow:
+
+| File | Purpose |
+|----|----|
+| `adguard_block.srs` | Block list, mount as `REJECT` / `block` |
+| `adguard_allow.srs` | Exceptions, route `DIRECT` **before** the block rule |
+| `meta.json` | sing-box version, domain counts, size and sha256 of both files |
+
+```
+https://raw.githubusercontent.com/AyraHikari/openclash_adguard/srs/adguard_block.srs
+https://raw.githubusercontent.com/AyraHikari/openclash_adguard/srs/adguard_allow.srs
+https://raw.githubusercontent.com/AyraHikari/openclash_adguard/srs/meta.json
+```
+
+### sing-box / Momo usage
+
+Do **not** use `format: "source"` on a router: sing-box would compile the 300k-domain list in RAM
+(~1.5 GB needed, most routers have far less). Use the precompiled binary with `format: "binary"`.
+
+```json
+"rule_set": [
+  {
+    "type": "remote",
+    "tag": "adguard-block",
+    "format": "binary",
+    "url": "https://raw.githubusercontent.com/AyraHikari/openclash_adguard/srs/adguard_block.srs",
+    "download_detour": "DIRECT",
+    "update_interval": "12h"
+  }
+],
+"route": {
+  "rules": [
+    { "action": "sniff" },
+    { "rule_set": "adguard-allow", "action": "route", "outbound": "DIRECT" },
+    { "rule_set": "adguard-block", "action": "route", "outbound": "BLOCK" }
+  ]
+}
+```
+
+`download_detour` must be a direct outbound, otherwise the download itself is routed through the
+proxy that is being configured.
+
+### Local build
+
+```sh
+python3 scripts/convert_adguard_to_singbox.py      # rules/*.json
+SINGBOX_VERSION=1.13.21 scripts/build_srs.sh rules # rules/*.srs
+```
+
+`.srs` files are only loadable by a sing-box release whose rule-set format is compatible: rebuild when
+the router's sing-box version changes.
+
 ## License & Attribution
 
 This project does not create new blocklists.

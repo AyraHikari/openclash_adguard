@@ -1,0 +1,79 @@
+name: Build sing-box rule-sets
+
+on:
+  schedule:
+    - cron: "20 */12 * * *" # 20 min after the Clash converters
+  workflow_dispatch:
+
+concurrency:
+  group: singbox-rulesets
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      SINGBOX_VERSION: "1.13.21"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Convert lists to sing-box rule-set JSON
+        run: |
+          python3 scripts/convert_adguard_to_singbox.py \
+            --out-block "$RUNNER_TEMP/dist/adguard_block.json" \
+            --out-allow "$RUNNER_TEMP/dist/adguard_allow.json"
+
+      - name: Compile to .srs
+        run: |
+          SINGBOX_CACHE="$RUNNER_TEMP/singbox" scripts/build_srs.sh "$RUNNER_TEMP/dist"
+
+      - name: Write metadata
+        run: |
+          python3 - "$RUNNER_TEMP/dist" <<'PY'
+          import datetime, hashlib, json, os, sys
+
+          dist = sys.argv[1]
+          meta = {
+              "generated_at": datetime.datetime.now(datetime.timezone.utc)
+              .isoformat(timespec="seconds"),
+              "singbox_version": os.environ["SINGBOX_VERSION"],
+              "files": {},
+          }
+          for name in ("adguard_block", "adguard_allow"):
+              raw = open(os.path.join(dist, name + ".srs"), "rb").read()
+              src = json.load(open(os.path.join(dist, name + ".json")))
+              domains = len(src["rules"][0]["domain_suffix"]) if src["rules"] else 0
+              meta["files"][name + ".srs"] = {
+                  "bytes": len(raw),
+                  "sha256": hashlib.sha256(raw).hexdigest(),
+                  "domains": domains,
+              }
+          with open(os.path.join(dist, "meta.json"), "w") as f:
+              json.dump(meta, f, indent=2)
+          print(json.dumps(meta, indent=2))
+          PY
+
+      - name: Publish to srs branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd "$RUNNER_TEMP/dist"
+          rm -f adguard_block.json adguard_allow.json
+          # meta.json stays: it carries size and sha256 for the device updater
+          ls -l
+          git init -q -b srs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -q -m "rule-sets: sing-box ${SINGBOX_VERSION} $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push --force \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" srs
