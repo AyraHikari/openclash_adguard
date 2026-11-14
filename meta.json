@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-11-14T06:39:50+00:00",
+  "singbox_version": "1.13.21",
+  "files": {
+    "adguard_block.srs": {
+      "bytes": 2560657,
+      "sha256": "c021af523b5971349880f5a618611856a0d1c4f2f3fba264d3a063629ec7ab6c",
+      "domains": 311261
+    },
+    "adguard_allow.srs": {
+      "bytes": 2980,
+      "sha256": "2656c52f42bc95ecbc58292da5e064ac182c9468089aecfa43fff704baa7a0ad",
+      "domains": 248
+    }
+  }
+}
