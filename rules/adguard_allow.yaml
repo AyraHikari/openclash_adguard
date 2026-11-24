@@ -1,5 +1,5 @@
 # OpenClash AdGuard Converted: https://github.com/AyraHikari/openclash_adguard
-# Updated at: 2026-11-24 09:09:31 +0000
+# Updated at: 2026-11-24 22:07:08 +0000
 # Sources:
 # - https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
 # - https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt
@@ -8,7 +8,7 @@
 # - https://adguardteam.github.io/HostlistsRegistry/assets/filter_34.txt
 # - https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
 
-# Total allow domains: 248
+# Total allow domains: 247
 
 payload:
   - DOMAIN-SUFFIX,5471782.fls.doubleclick.net
@@ -148,7 +148,6 @@ payload:
   - DOMAIN-SUFFIX,leechers-paradise.org
   - DOMAIN-SUFFIX,link.meet5.net
   - DOMAIN-SUFFIX,link.morningbrew.com
-  - DOMAIN-SUFFIX,link.nzz.ch
   - DOMAIN-SUFFIX,link.sylikes.com
   - DOMAIN-SUFFIX,linka.page
   - DOMAIN-SUFFIX,links.e.theatlantic.com
